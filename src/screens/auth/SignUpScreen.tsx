@@ -150,7 +150,7 @@ export const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
                   <View style={styles.inputGroup}>
                     <Text style={styles.inputLabel}>Phone Number</Text>
                     <Input
-                      placeholder="e.g. 07066773487"
+                      placeholder="e.g. 07066773487what's coarse location permission "
                       value={values.phone}
                       onChangeText={handleChange('phone')}
                       onBlur={handleBlur('phone')}
@@ -258,36 +258,39 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     justifyContent: 'center',
-    paddingHorizontal: 28,
-    paddingVertical: 16,
+    paddingHorizontal: 32,
+    paddingVertical: 24,
+    maxWidth: 440,
+    width: '100%',
+    alignSelf: 'center',
   },
   logoContainer: {
     alignItems: 'center',
-    marginBottom: 16,
+    marginBottom: 20,
   },
   logoBackground: {
-    width: 56,
-    height: 56,
+    width: 48,
+    height: 48,
     borderRadius: 12,
     backgroundColor: '#7CB342',
     justifyContent: 'center',
     alignItems: 'center',
   },
   title: {
-    fontSize: 24,
+    fontSize: 22,
     fontFamily: TYPOGRAPHY.fontFamily.bold,
     color: COLORS.text.primary,
     textAlign: 'center',
-    marginBottom: 28,
+    marginBottom: 32,
   },
   form: {
-    marginBottom: 16,
+    marginBottom: 20,
   },
   inputGroup: {
-    marginBottom: 12,
+    marginBottom: 14,
   },
   inputLabel: {
-    fontSize: 13,
+    fontSize: 12,
     fontFamily: TYPOGRAPHY.fontFamily.medium,
     color: COLORS.text.primary,
     marginBottom: 6,
@@ -296,28 +299,28 @@ const styles = StyleSheet.create({
     marginBottom: 0,
   },
   signUpButton: {
-    marginTop: 6,
+    marginTop: 8,
     backgroundColor: COLORS.primary,
     borderRadius: 10,
-    minHeight: 46,
+    minHeight: 48,
   },
   dividerText: {
     fontSize: 12,
     fontFamily: TYPOGRAPHY.fontFamily.regular,
     color: COLORS.text.secondary,
     textAlign: 'center',
-    marginVertical: 14,
+    marginVertical: 20,
   },
   socialContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
-    gap: 14,
-    marginBottom: 16,
+    gap: 16,
+    marginBottom: 20,
   },
   socialButton: {
-    width: 52,
-    height: 52,
-    borderRadius: 26,
+    width: 48,
+    height: 48,
+    borderRadius: 24,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,

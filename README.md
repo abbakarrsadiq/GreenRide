@@ -38,3 +38,18 @@ Scan QR with Expo Go app (iOS/Android) or press `i` for iOS simulator, `a` for A
 ```bash
 npm test
 ```
+
+## Build APK
+
+1. Create Expo account at https://expo.dev
+2. Login to EAS:
+```bash
+eas login
+```
+
+3. Build APK:
+```bash
+eas build -p android --profile preview
+```
+
+The APK will be available for download from your Expo dashboard once the build completes (usually 10-15 minutes).

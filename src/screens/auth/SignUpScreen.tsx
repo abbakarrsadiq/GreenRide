@@ -132,9 +132,9 @@ export const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
                   </View>
 
                   <View style={styles.inputGroup}>
-                    <Text style={styles.inputLabel}>Email or Phone Number</Text>
+                    <Text style={styles.inputLabel}>Email</Text>
                     <Input
-                      placeholder="Enter your email or phone"
+                      placeholder="Enter your email"
                       value={values.email}
                       onChangeText={handleChange('email')}
                       onBlur={handleBlur('email')}
@@ -142,6 +142,21 @@ export const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
                       keyboardType="email-address"
                       autoCapitalize="none"
                       error={touched.email && errors.email ? errors.email : undefined}
+                      variant="default"
+                      containerStyle={styles.inputContainer}
+                    />
+                  </View>
+
+                  <View style={styles.inputGroup}>
+                    <Text style={styles.inputLabel}>Phone Number</Text>
+                    <Input
+                      placeholder="e.g. 07066773487"
+                      value={values.phone}
+                      onChangeText={handleChange('phone')}
+                      onBlur={handleBlur('phone')}
+                      leftIcon="call-outline"
+                      keyboardType="phone-pad"
+                      error={touched.phone && errors.phone ? errors.phone : undefined}
                       variant="default"
                       containerStyle={styles.inputContainer}
                     />
